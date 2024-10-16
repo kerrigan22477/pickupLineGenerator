@@ -83,7 +83,8 @@ class FirstOrderMarkovModel(object):
             word = np.random.choice([*self.transitions[1][word].keys()], replace=True,
                                     p=[*self.transitions[1][word].values()])
             phrase += word + ' '
-        return phrase
+
+        return phrase[:len(phrase) - 1]
 
 
 mm_pickup = FirstOrderMarkovModel(pickup_lines)
