@@ -90,4 +90,4 @@ class FirstOrderMarkovModel(object):
 mm_pickup = FirstOrderMarkovModel(pickup_lines)
 mm_pickup.build_transition_matrices()
 for i in range(3):
-    print(str(i + 1) + ') ' + mm_pickup.generate_pickup_line())
+    print(str(i + 1) + ') ' + (mm_pickup.generate_pickup_line()).capitalize())
