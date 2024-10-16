@@ -84,7 +84,7 @@ class FirstOrderMarkovModel(object):
                                     p=[*self.transitions[1][word].values()])
             phrase += word + ' '
 
-        return phrase[:len(phrase) - 1]
+        return phrase[:len(phrase) - 2]
 
 
 mm_pickup = FirstOrderMarkovModel(pickup_lines)
